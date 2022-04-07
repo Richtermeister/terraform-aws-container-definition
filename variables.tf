@@ -149,3 +149,9 @@ variable "stop_timeout" {
   description = "Time duration (in seconds) to wait before the container is forcefully killed if it doesn't exit normally on its own"
   default     = null
 }
+
+variable ignore_task_definition {
+  description = "Whether to ignore task definition changes. This is useful if you use a CI flow outside of Terraform."
+  type        = bool
+  default     = false
+}
